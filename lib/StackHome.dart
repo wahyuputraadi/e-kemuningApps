@@ -764,6 +764,7 @@ class StackHome extends StatelessWidget {
                                 'Darurat 112',
                                 style: blackTextStyle.copyWith(fontSize: 12),
                               ),
+                              Text('Tester'),
                             ],
                           ),
                         ],
