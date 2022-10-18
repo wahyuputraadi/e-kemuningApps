@@ -1,6 +1,8 @@
 import 'package:e_kemuning/Pages/Kelurahan_detail.dart';
 import 'package:e_kemuning/Pages/keterangan.dart';
 import 'package:e_kemuning/Pages/perizinan.dart';
+import 'package:e_kemuning/Pages/profil.dart';
+import 'package:e_kemuning/Pages/slide_bar.dart';
 import 'package:e_kemuning/Themes/theme.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +18,8 @@ import 'Pages/Lisview_activitiy.dart';
 class StackHome extends StatelessWidget {
   const StackHome({Key? key}) : super(key: key);
   final String _phoneNumberPolis = '110';
-  final String _phoneNumber = '113';
+  final String _phoneNumberDamkar = '113';
+  final String _phoneNumberAmbulance = '119';
 
   @override
   Widget build(BuildContext context) {
@@ -146,7 +149,16 @@ class StackHome extends StatelessWidget {
                       Column(
                         children: [
                           InkWell(
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) {
+                                    return const ProfilPage();
+                                  },
+                                ),
+                              );
+                            },
                             child: Container(
                               width: 83,
                               height: 83,
@@ -407,38 +419,6 @@ class StackHome extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      // Column(
-                      //   children: [
-                      //     InkWell(
-                      //       onTap: () {},
-                      //       child: Container(
-                      //         width: 83,
-                      //         height: 83,
-                      //         padding: EdgeInsets.all(21),
-                      //         decoration: BoxDecoration(
-                      //           color:
-                      //               const Color(0xFF0196FF).withOpacity(0.05),
-                      //           border: Border.all(
-                      //               color: const Color(0xFF0196FF),
-                      //               width: 0,
-                      //               style: BorderStyle.none),
-                      //           borderRadius: BorderRadius.circular(24),
-                      //           //color: Colors.transparent,
-                      //           shape: BoxShape.rectangle,
-                      //         ),
-                      //         child: Ink.image(
-                      //           image: AssetImage('assets/images/alarm.png'),
-                      //           fit: BoxFit.fill,
-                      //         ),
-                      //       ),
-                      //     ),
-                      //     const SizedBox(
-                      //       height: 8,
-                      //     ),
-                      //     Text('Pengaduan'),
-                      //   ],
-                      // ),
-
                       Column(
                         children: [
                           InkWell(
@@ -455,8 +435,7 @@ class StackHome extends StatelessWidget {
                               height: 83,
                               padding: EdgeInsets.all(21),
                               decoration: BoxDecoration(
-                                color:
-                                    const Color(0xFF0196FF).withOpacity(0.05),
+                                color: bgAbu.withOpacity(0.05),
                                 border: Border.all(
                                     color: const Color(0xFF0196FF),
                                     width: 0,
@@ -475,7 +454,7 @@ class StackHome extends StatelessWidget {
                             height: 8,
                           ),
                           Text(
-                            'Perizinan',
+                            'Surat Perizinan',
                             style: blackTextStyle.copyWith(fontSize: 12),
                           ),
                         ],
@@ -500,7 +479,7 @@ class StackHome extends StatelessWidget {
                               padding: const EdgeInsets.all(21),
                               decoration: BoxDecoration(
                                 color:
-                                    const Color(0xFF0196FF).withOpacity(0.05),
+                                  bgAbu.withOpacity(0.05),
                                 border: Border.all(
                                     color: const Color(0xFF0196FF),
                                     width: 0,
@@ -511,7 +490,7 @@ class StackHome extends StatelessWidget {
                               ),
                               child: Ink.image(
                                 image:
-                                    AssetImage('assets/images/shield-tick.png'),
+                                    AssetImage('assets/images/izin.png'),
                                 fit: BoxFit.fill,
                               ),
                             ),
@@ -520,7 +499,7 @@ class StackHome extends StatelessWidget {
                             height: 8,
                           ),
                           Text(
-                            'Keterangan',
+                            'Surat Keterangan',
                             style: blackTextStyle.copyWith(fontSize: 12),
                           ),
                         ],
@@ -528,43 +507,78 @@ class StackHome extends StatelessWidget {
                       const SizedBox(
                         width: 16,
                       ),
-                      // Column(
-                      //   children: [
-                      //     InkWell(
-                      //       onTap: () {},
-                      //       child: Container(
-                      //         width: 83,
-                      //         height: 83,
-                      //         padding: EdgeInsets.all(21),
-                      //         decoration: BoxDecoration(
-                      //           color:
-                      //               const Color(0xFF0196FF).withOpacity(0.05),
-                      //           border: Border.all(
-                      //               color: const Color(0xFF0196FF),
-                      //               width: 0,
-                      //               style: BorderStyle.none),
-                      //           borderRadius: BorderRadius.circular(24),
-                      //           //color: Colors.transparent,
-                      //           shape: BoxShape.rectangle,
-                      //         ),
-                      //         child: Ink.image(
-                      //           image: AssetImage('assets/images/medal.png'),
-                      //           fit: BoxFit.fill,
-                      //         ),
-                      //       ),
-                      //     ),
-                      //     const SizedBox(
-                      //       height: 8,
-                      //     ),
-                      //     Text('Program'),
-                      //   ],
-                      // ),
+                      Column(
+                        children: [
+                          InkWell(
+                            onTap: () {},
+                            child: Container(
+                              width: 83,
+                              height: 83,
+                              padding: EdgeInsets.all(21),
+                              decoration: BoxDecoration(
+                                color:
+                                   bgAbu.withOpacity(0.05),
+                                border: Border.all(
+                                    color: const Color(0xFF0196FF),
+                                    width: 0,
+                                    style: BorderStyle.none),
+                                borderRadius: BorderRadius.circular(24),
+                                //color: Colors.transparent,
+                                shape: BoxShape.rectangle,
+                              ),
+                              child: Ink.image(
+                                image: AssetImage('assets/images/pengaduan.png'),
+                                fit: BoxFit.fill,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 8,
+                          ),
+                          Text('Pengaduan'),
+                        ],
+                      ),
+                      const SizedBox(
+                        width: 16,
+                      ),
+                      Column(
+                        children: [
+                          InkWell(
+                            onTap: () {},
+                            child: Container(
+                              width: 83,
+                              height: 83,
+                              padding: EdgeInsets.all(21),
+                              decoration: BoxDecoration(
+                                color:
+                                bgAbu.withOpacity(0.05),
+                                border: Border.all(
+                                    color: const Color(0xFF0196FF),
+                                    width: 0,
+                                    style: BorderStyle.none),
+                                borderRadius: BorderRadius.circular(24),
+                                //color: Colors.transparent,
+                                shape: BoxShape.rectangle,
+                              ),
+                              child: Ink.image(
+                                image: AssetImage('assets/images/program.png'),
+                                fit: BoxFit.fill,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 8,
+                          ),
+                          Text('Program'),
+                        ],
+                      ),
                     ],
                   ),
                 ),
               ],
             ),
           ),
+          const SizedBox(height: 16,),
           const Divider(
             height: 16,
             thickness: 10,
@@ -641,7 +655,7 @@ class StackHome extends StatelessWidget {
                                 height: 8,
                               ),
                               Text(
-                                'Polisi',
+                                'Polsek',
                                 style: blackTextStyle.copyWith(fontSize: 12),
                               ),
                             ],
@@ -653,8 +667,8 @@ class StackHome extends StatelessWidget {
                             children: [
                               InkWell(
                                 onTap: () async {
-                                  final _call = 'tel:$_phoneNumber';
-                                  final _text = 'sms:$_phoneNumber';
+                                  final _call = 'tel:$_phoneNumberDamkar';
+                                  final _text = 'sms:$_phoneNumberDamkar';
                                   if (await canLaunch(_call)) {
                                     await launch(_call);
                                   }
@@ -761,10 +775,10 @@ class StackHome extends StatelessWidget {
                                 height: 8,
                               ),
                               Text(
-                                'Darurat 112',
+                                'Pengaduan Lampu',
                                 style: blackTextStyle.copyWith(fontSize: 12),
                               ),
-                              Text('Tester'),
+                              Text('Jalan (PJPP)'),
                             ],
                           ),
                         ],
@@ -772,99 +786,56 @@ class StackHome extends StatelessWidget {
                       const SizedBox(
                         height: 16,
                       ),
-                      // Row(
-                      //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      //   children: [
-                      //     Column(
-                      //       children: [
-                      //         InkWell(
-                      //           onTap: () async {
-                      //             final _call = 'tel:$_phoneNumberPolis';
-                      //             final _text = 'sms:$_phoneNumberPolis';
-                      //             if (await canLaunch(_call)) {
-                      //               await launch(_call);
-                      //             }
-                      //           },
-                      //           child: Container(
-                      //             width: 83,
-                      //             height: 83,
-                      //             padding: EdgeInsets.all(21.0),
-                      //             decoration: BoxDecoration(
-                      //               color: const Color(0xFF0196FF)
-                      //                   .withOpacity(0.05),
-                      //               border: Border.all(
-                      //                   color: const Color(0xFF0196FF),
-                      //                   width: 0,
-                      //                   style: BorderStyle.none),
-                      //               borderRadius: BorderRadius.circular(24),
-                      //               //color: Colors.transparent,
-                      //               shape: BoxShape.rectangle,
-                      //             ),
-                      //             child: Ink.image(
-                      //               image: AssetImage(
-                      //                   'assets/images/call-calling.png'),
-                      //               fit: BoxFit.fill,
-                      //             ),
-                      //           ),
-                      //         ),
-                      //         const SizedBox(
-                      //           height: 8,
-                      //         ),
-                      //         Text('Polisi'),
-                      //       ],
-                      //     ),
-                      //     const SizedBox(
-                      //       width: 16,
-                      //     ),
-                      //     Column(
-                      //       children: [
-                      //         InkWell(
-                      //           onTap: () async {
-                      //             final _call = 'tel:$_phoneNumber';
-                      //             final _text = 'sms:$_phoneNumber';
-                      //             if (await canLaunch(_call)) {
-                      //               await launch(_call);
-                      //             }
-                      //           },
-                      //           child: Container(
-                      //             width: 83,
-                      //             height: 83,
-                      //             padding: EdgeInsets.all(21),
-                      //             decoration: BoxDecoration(
-                      //               color: const Color(0xFF0196FF)
-                      //                   .withOpacity(0.05),
-                      //               border: Border.all(
-                      //                   color: const Color(0xFF0196FF),
-                      //                   width: 0,
-                      //                   style: BorderStyle.none),
-                      //               borderRadius: BorderRadius.circular(24),
-                      //               //color: Colors.transparent,
-                      //               shape: BoxShape.rectangle,
-                      //             ),
-                      //             child: Ink.image(
-                      //               image: AssetImage(
-                      //                   'assets/images/call-calling.png'),
-                      //               fit: BoxFit.fill,
-                      //             ),
-                      //           ),
-                      //         ),
-                      //         const SizedBox(
-                      //           height: 8,
-                      //         ),
-                      //         Text('Damkar'),
-                      //       ],
-                      //     ),
-                      //     const SizedBox(
-                      //       width: 16,
-                      //     ),
-                      //   ],
-                      // ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Column(
+                            children: [
+                              InkWell(
+                                onTap: () async {
+                                  final _call = 'tel:$_phoneNumberPolis';
+                                  final _text = 'sms:$_phoneNumberPolis';
+                                  if (await canLaunch(_call)) {
+                                    await launch(_call);
+                                  }
+                                },
+                                child: Container(
+                                  width: 83,
+                                  height: 83,
+                                  padding: EdgeInsets.all(21.0),
+                                  decoration: BoxDecoration(
+                                    color: const Color(0xFF0196FF)
+                                        .withOpacity(0.05),
+                                    border: Border.all(
+                                        color: const Color(0xFF0196FF),
+                                        width: 0,
+                                        style: BorderStyle.none),
+                                    borderRadius: BorderRadius.circular(24),
+                                    //color: Colors.transparent,
+                                    shape: BoxShape.rectangle,
+                                  ),
+                                  child: Ink.image(
+                                    image: AssetImage(
+                                        'assets/images/call-calling.png'),
+                                    fit: BoxFit.fill,
+                                  ),
+                                ),
+                              ),
+                              const SizedBox(
+                                height: 8,
+                              ),
+                              Text('Puskesmas'),
+                            ],
+                          ),
+                        ],
+                      ),
                     ],
                   ),
                 ),
               ],
             ),
           ),
+          const SizedBox(height: 16,),
           const Divider(
             height: 16,
             thickness: 10,
@@ -872,6 +843,7 @@ class StackHome extends StatelessWidget {
             endIndent: 0,
             color: Color(0XFFF6F6F6),
           ),
+          SlideBar(),
           // Padding(
           //   padding: const EdgeInsets.only(
           //     top: 26,
