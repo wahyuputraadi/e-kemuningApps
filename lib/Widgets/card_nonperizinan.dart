@@ -1,8 +1,10 @@
 import 'package:e_kemuning/Models/nonperizinan.dart';
 import 'package:e_kemuning/Models/perizinan.dart';
-import 'package:e_kemuning/Pages/perizinan_detail.dart';
+import 'package:e_kemuning/Pages/nonperizinan_mendirikan_bangunan.dart';
 import 'package:e_kemuning/Themes/theme.dart';
 import 'package:flutter/material.dart';
+
+import '../Pages/nonperizinan_mendirikan_bangunan.dart';
 
 class CardNonPerizinan extends StatelessWidget {
   final NonPerizinan nonperizinan;
@@ -31,7 +33,7 @@ class CardNonPerizinan extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const PerizinanDetail(),
+                  builder: (context) => const nonPerizinanDetail(),
                 ),
               );
             },

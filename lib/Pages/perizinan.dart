@@ -1,11 +1,28 @@
 import 'package:e_kemuning/Models/nonperizinan.dart';
 import 'package:e_kemuning/Models/perizinan.dart';
-import 'package:e_kemuning/Pages/perizinan_detail.dart';
+import 'package:e_kemuning/Pages/nonperizinan_mendirikan_bangunan.dart';
 import 'package:e_kemuning/StackHome.dart';
 import 'package:e_kemuning/Themes/theme.dart';
+import 'package:e_kemuning/Widgets/card_nonperijinan_pencatatan_surat_tanah.dart';
 import 'package:e_kemuning/Widgets/card_nonperizinan.dart';
-import 'package:e_kemuning/Widgets/card_perizinan.dart';
+import 'package:e_kemuning/Widgets/card_perizinan_op_salon.dart';
 import 'package:flutter/material.dart';
+import 'package:e_kemuning/Widgets/card_nonperijinand_domisiliusaha.dart';
+import 'package:e_kemuning/Widgets/card_nonperijinan_surat_kebersihan_diri.dart';
+import 'package:e_kemuning/Widgets/card_nonperijinan_penelitian.dart';
+import 'package:e_kemuning/Widgets/card_nonperijinan_domisili.dart';
+import 'package:e_kemuning/Widgets/card_nonperijinan_keramaian.dart';
+import 'package:e_kemuning/Widgets/card_nonperijinan_suratnikah.dart';
+import 'package:e_kemuning/Widgets/card_nonperijinan_legalisirdok.dart';
+import 'package:e_kemuning/Widgets/card_nonperijinan_penerbitan_surat.dart';
+import 'package:e_kemuning/Widgets/card_nonperijinan_ahliwaris.dart';
+import 'package:e_kemuning/Widgets/card_perizinan_op_salon.dart';
+import 'package:e_kemuning/Widgets/card_perijinan_pijat_tradisional.dart';
+import 'package:e_kemuning/Widgets/card_perijinan_pijat_modern.dart';
+import 'package:e_kemuning/Widgets/card_perijinan_pariwisata.dart';
+import 'package:e_kemuning/Widgets/card_perijinan_pemasangan_reklame.dart';
+import 'package:e_kemuning/Widgets/card_perijinan_pemakaman.dart';
+import 'package:e_kemuning/Widgets/card_perijinan_perdagangan.dart';
 
 class PerizinanPage extends StatelessWidget {
   const PerizinanPage({Key? key}) : super(key: key);
@@ -48,49 +65,49 @@ class PerizinanPage extends StatelessWidget {
                 backgroundColor: lightColor,
                 body: ListView(
                   children: [
-                    CardPerizinan(
+                    CardPerizinadagang(
                       Perizinan(
                         id: 1,
                         primaryText: 'SURAT IZIN USAHA',
                         secondText: 'Perdagangan',
                       ),
                     ),
-                    CardPerizinan(
+                    CardPerizinanpariwisata(
                       Perizinan(
                         id: 2,
                         primaryText: 'SURAT IZIN USAHA',
                         secondText: 'Kepariwisataan',
                       ),
                     ),
-                    CardPerizinan(
+                    CardPerizinanpemakaman(
                       Perizinan(
                         id: 3,
                         primaryText: 'SURAT IZIN PEMAKAMAN',
                         secondText: '(TPU)',
                       ),
                     ),
-                    CardPerizinan(
+                    CardPerizinapijatmo(
                       Perizinan(
                         id: 4,
                         primaryText: 'SURAT KEPUTUSAN IZIN OPERASIONAL',
                         secondText: 'Pijat Modern',
                       ),
                     ),
-                    CardPerizinan(
+                    CardPerizinapijat(
                       Perizinan(
                         id: 5,
                         primaryText: 'SURAT KEPUTUSAN IZIN OPERASIONAL',
                         secondText: 'Pijat Tradisional',
                       ),
                     ),
-                    CardPerizinan(
+                    CardPerizinanreklame(
                       Perizinan(
                         id: 6,
                         primaryText: 'SURAT IZIN PEMASANGAN',
                         secondText: 'Reklame',
                       ),
                     ),
-                    CardPerizinan(
+                    CardPerizinanopsalon(
                       Perizinan(
                         id: 7,
                         primaryText: 'SURAT KEPUTUSAN IZIN OPERASIONAL',
@@ -110,52 +127,64 @@ class PerizinanPage extends StatelessWidget {
                         primaryText: 'SURAT IZIN MENDIRIKAN BANGUNAN (IMB)',
                       ),
                     ),
-                    CardNonPerizinan(
+                    CardNonPerizinandomisili(
                       NonPerizinan(
                         id: 2,
                         primaryText: 'SURAT IZIN DOMISILI USAHA',
                       ),
                     ),
-                    CardNonPerizinan(
+                    CardNonPerizinanbersih(
                       NonPerizinan(
                         id: 3,
-                        primaryText: 'REKOMENDASI PENDAFTARAN TNI/POLRI',
+                        primaryText: 'SURAT KETERANGAN BERSIH DIRI (SKBD)',
                       ),
                     ),
-                    CardNonPerizinan(
+                    CardNonPerizinandomisil(
                       NonPerizinan(
                         id: 4,
-                        primaryText: 'PERMOHONAN LEGALISIR DOKUMEN',
+                        primaryText: 'SURAT KETERANGAN DOMISILI',
                       ),
                     ),
-                    CardNonPerizinan(
+                    CardNonsuratnikah(
                       NonPerizinan(
                         id: 5,
                         primaryText: 'SURAT DISPENSASI NIKAH',
                       ),
                     ),
-                    CardNonPerizinan(
+                    CardNonPerizinankeramaian(
                       NonPerizinan(
                         id: 6,
                         primaryText: 'SURAT IZIN KERAMAIAN',
                       ),
                     ),
-                    CardNonPerizinan(
+                    CardNonPlegalisirdok(
                       NonPerizinan(
                         id: 7,
-                        primaryText: 'PENCATATAN SURAT TANAH',
+                        primaryText: 'PERMOHONAN LEGALISIR DOKUMEN',
                       ),
                     ),
-                    CardNonPerizinan(
+                    CardNonPenelitian(
                       NonPerizinan(
                         id: 8,
                         primaryText: 'SURAT IZIN PENELITIAN',
                       ),
                     ),
-                    CardNonPerizinan(
+                    CardNonPerizinanpencatatansurat(
                       NonPerizinan(
                         id: 9,
                         primaryText: 'PENCATATAN SURAT TANAH',
+                      ),
+                    ),
+                    CardNonpenerbitansurat(
+                      NonPerizinan(
+                        id: 10,
+                        primaryText: 'PENERBITAN SURAT KETERANGAN ',
+                      ),
+                    ),
+                    CardNonahliawaris(
+                      NonPerizinan(
+                        id: 10,
+                        primaryText: 'SURAT KETERANGAN AHLI WARIS',
                       ),
                     ),
                   ],

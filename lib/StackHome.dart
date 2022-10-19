@@ -10,7 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:e_kemuning/Pages/detail_wilayah.dart';
-import 'package:e_kemuning/Pages/kelurahan';
+//import 'package:e_kemuning/Pages/kelurahan';
 import 'package:e_kemuning/list_data.dart';
 
 import 'Pages/Lisview_activitiy.dart';
@@ -20,6 +20,8 @@ class StackHome extends StatelessWidget {
   final String _phoneNumberPolis = '110';
   final String _phoneNumberDamkar = '113';
   final String _phoneNumberAmbulance = '119';
+  final String _phoneNumberJalan = '081368866070';
+  final String _phoneNumberPuskesmas = '119';
 
   @override
   Widget build(BuildContext context) {
@@ -75,21 +77,9 @@ class StackHome extends StatelessWidget {
                                 width: 310,
                                 height: 210,
                                 child: Image.asset(
-                                  'assets/images/Home Banner2.png',
+                                  'assets/images/Home Banner.png',
                                   fit: BoxFit.contain,
                                 ),
-                                // decoration: BoxDecoration(
-                                //   //color: Colors.amber,
-                                //   image: const DecorationImage(
-                                //       image: AssetImage(
-                                //         'assets/images/Home Banner2.png',
-                                //       ),
-                                //       fit: BoxFit.cover),
-                                //   // border: Border.all(
-                                //   //   width: 1,
-                                //   // ),
-                                //   borderRadius: BorderRadius.circular(16.0),
-                                // ),
                               ),
                               const SizedBox(
                                 width: 8,
@@ -99,6 +89,17 @@ class StackHome extends StatelessWidget {
                                 height: 210,
                                 child: Image.asset(
                                   'assets/images/Home Banner2.png',
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
+                              const SizedBox(
+                                width: 8,
+                              ),
+                              Container(
+                                width: 310,
+                                height: 210,
+                                child: Image.asset(
+                                  'assets/images/Home Banner 3.png',
                                   fit: BoxFit.contain,
                                 ),
                               ),
@@ -154,7 +155,7 @@ class StackHome extends StatelessWidget {
                                 context,
                                 MaterialPageRoute(
                                   builder: (context) {
-                                    return const ProfilPage();
+                                    return const TabBarPage();
                                   },
                                 ),
                               );
@@ -245,10 +246,10 @@ class StackHome extends StatelessWidget {
                                 context,
                                 MaterialPageRoute(
                                   builder: (context) {
-                                    // return detailskelurahan();
-                                    return LisViewActivity(
-                                      title: 'Data List Kemuning',
-                                    );
+                                    // return LisViewActivity(
+                                    //   title: 'Data List Kelurahan',
+                                    // );
+                                    return detailskelurahan();
                                   },
                                 ),
                               );
@@ -435,7 +436,7 @@ class StackHome extends StatelessWidget {
                               height: 83,
                               padding: EdgeInsets.all(21),
                               decoration: BoxDecoration(
-                                color: bgAbu.withOpacity(0.05),
+                                color: const Color(0xFF0196FF).withOpacity(0.05),
                                 border: Border.all(
                                     color: const Color(0xFF0196FF),
                                     width: 0,
@@ -445,7 +446,7 @@ class StackHome extends StatelessWidget {
                                 shape: BoxShape.rectangle,
                               ),
                               child: Ink.image(
-                                image: AssetImage('assets/images/note-2.png'),
+                                image: AssetImage('assets/images/suratizin.png'),
                                 fit: BoxFit.fill,
                               ),
                             ),
@@ -479,7 +480,7 @@ class StackHome extends StatelessWidget {
                               padding: const EdgeInsets.all(21),
                               decoration: BoxDecoration(
                                 color:
-                                  bgAbu.withOpacity(0.05),
+                                const Color(0xFF0196FF).withOpacity(0.05),
                                 border: Border.all(
                                     color: const Color(0xFF0196FF),
                                     width: 0,
@@ -490,7 +491,7 @@ class StackHome extends StatelessWidget {
                               ),
                               child: Ink.image(
                                 image:
-                                    AssetImage('assets/images/izin.png'),
+                                    AssetImage('assets/images/shield-tick.png'),
                                 fit: BoxFit.fill,
                               ),
                             ),
@@ -710,7 +711,13 @@ class StackHome extends StatelessWidget {
                           Column(
                             children: [
                               InkWell(
-                                onTap: () {},
+                                onTap: () async {
+                                  final _call = 'tel:$_phoneNumberAmbulance';
+                                  final _text = 'sms:$_phoneNumberAmbulance';
+                                  if (await canLaunch(_call)) {
+                                    await launch(_call);
+                                  }
+                                },
                                 child: Container(
                                   width: 83,
                                   height: 83,
@@ -748,7 +755,13 @@ class StackHome extends StatelessWidget {
                           Column(
                             children: [
                               InkWell(
-                                onTap: () {},
+                                onTap: () async {
+                                  final _call = 'tel:$_phoneNumberJalan';
+                                  final _text = 'sms:$_phoneNumberJalan';
+                                  if (await canLaunch(_call)) {
+                                    await launch(_call);
+                                  }
+                                },
                                 child: Container(
                                   width: 83,
                                   height: 83,
