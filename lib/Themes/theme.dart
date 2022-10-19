@@ -10,6 +10,7 @@ Color orangeColor = const Color(0xffFFC700);
 Color loginColor = const Color(0xffFCF3F3);
 Color greenColor = const Color(0xff00D100);
 Color primaryColor = const Color(0XFF0196FF);
+Color bgAbu = const Color(0XFFB9B9B9);
 
 TextStyle whiteTextStyle = GoogleFonts.poppins(
   color: whiteColor,
@@ -37,4 +38,8 @@ TextStyle primaryTextStyle = GoogleFonts.poppins(
 
 TextStyle greenTextStyle = GoogleFonts.poppins(
   color: greenColor,
+);
+
+TextStyle bgAbuTextStyle = GoogleFonts.poppins(
+  color: bgAbu,
 );

@@ -1,5 +1,5 @@
 import 'package:e_kemuning/Models/keterangan.dart';
-import 'package:e_kemuning/Pages/perizinan_detail.dart';
+import 'package:e_kemuning/Pages/nonperizinan_mendirikan_bangunan.dart';
 import 'package:flutter/material.dart';
 
 import 'package:e_kemuning/Models/detailperizinan.dart';
@@ -29,14 +29,14 @@ class CardKeterangan extends StatelessWidget {
           elevation: 0,
           child: InkWell(
             splashColor: Colors.blue.withAlpha(30),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const PerizinanDetail(),
-                ),
-              );
-            },
+            // onTap: () {
+            //   Navigator.push(
+            //     context,
+            //     MaterialPageRoute(
+            //       builder: (context) => const //(),
+            //     ),
+            //   );
+            // },
             child: SizedBox(
               width: MediaQuery.of(context).size.width,
               height: 50,
