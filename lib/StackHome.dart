@@ -64,8 +64,8 @@ class StackHome extends StatelessWidget {
                   right: 0,
                   left: 0,
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 20, horizontal: 20),
+                    padding:
+                        const EdgeInsets.symmetric(vertical: 20, horizontal: 0),
                     child: SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       child: Column(
@@ -73,6 +73,9 @@ class StackHome extends StatelessWidget {
                         children: [
                           Row(
                             children: [
+                              const SizedBox(
+                                width: 20,
+                              ),
                               Container(
                                 width: 310,
                                 height: 210,
@@ -102,6 +105,9 @@ class StackHome extends StatelessWidget {
                                   'assets/images/Home Banner 3.png',
                                   fit: BoxFit.contain,
                                 ),
+                              ),
+                              const SizedBox(
+                                width: 20,
                               ),
                             ],
                           ),
@@ -141,236 +147,235 @@ class StackHome extends StatelessWidget {
                 const SizedBox(
                   height: 16,
                 ),
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      // Potensi Section
-
-                      Column(
-                        children: [
-                          InkWell(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) {
-                                    return const TabBarPage();
-                                  },
-                                ),
-                              );
-                            },
-                            child: Container(
-                              width: 83,
-                              height: 83,
-                              padding: EdgeInsets.all(21.0),
-                              decoration: BoxDecoration(
-                                color:
-                                    const Color(0xFF0196FF).withOpacity(0.05),
-                                border: Border.all(
-                                    color: const Color(0xFF0196FF),
-                                    width: 0,
-                                    style: BorderStyle.none),
-                                borderRadius: BorderRadius.circular(24),
-                                //color: Colors.transparent,
-                                shape: BoxShape.rectangle,
-                              ),
-                              child: Ink.image(
-                                image: AssetImage('assets/images/people.png'),
-                                height: 40,
-                                width: 40,
-                                //fit: BoxFit.fill,
-                              ),
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 8,
-                          ),
-                          Text(
-                            'Profil',
-                            style: blackTextStyle.copyWith(fontSize: 12),
-                          ),
-                        ],
-                      ),
-                      // Akhir Potensi Section
-                      const SizedBox(
-                        width: 16,
-                      ),
-                      Column(
-                        children: [
-                          InkWell(
-                            onTap: () async {
-                              Navigator.push(context,
-                                  MaterialPageRoute(builder: (context) {
-                                return const detailsWilayah();
-                              }));
-                            },
-                            child: Container(
-                              width: 83,
-                              height: 83,
-                              padding: EdgeInsets.all(20.0),
-                              decoration: BoxDecoration(
-                                color:
-                                    const Color(0xFF0196FF).withOpacity(0.05),
-                                border: Border.all(
-                                    color: const Color(0xFF0196FF),
-                                    width: 0,
-                                    style: BorderStyle.none),
-                                borderRadius: BorderRadius.circular(24),
-                                //color: Colors.transparent,
-                                shape: BoxShape.rectangle,
-                              ),
-                              child: Ink.image(
-                                image: AssetImage('assets/images/map.png'),
-                                //fit: BoxFit.fill,
-                              ),
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 8,
-                          ),
-                          Text(
-                            'Wilayah',
-                            style: blackTextStyle.copyWith(fontSize: 12),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(
-                        width: 16,
-                      ),
-                      Column(
-                        children: [
-                          InkWell(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) {
-                                    // return LisViewActivity(
-                                    //   title: 'Data List Kelurahan',
-                                    // );
-                                    return detailskelurahan();
-                                  },
-                                ),
-                              );
-                            },
-                            child: Container(
-                              width: 83,
-                              height: 83,
-                              padding: const EdgeInsets.all(21.0),
-                              decoration: BoxDecoration(
-                                color:
-                                    const Color(0xFF0196FF).withOpacity(0.05),
-                                border: Border.all(
-                                    color: const Color(0xFF0196FF),
-                                    width: 0,
-                                    style: BorderStyle.none),
-                                borderRadius: BorderRadius.circular(24),
-                                //color: Colors.transparent,
-                                shape: BoxShape.rectangle,
-                              ),
-                              child: Ink.image(
-                                image: const AssetImage(
-                                    'assets/images/personalcard.png'),
-                                height: 40,
-                                width: 40,
-                                //fit: BoxFit.fill,
-                              ),
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 8,
-                          ),
-                          Text(
-                            'Kelurahan',
-                            style: blackTextStyle.copyWith(fontSize: 12),
-                          ),
-                        ],
-                      ),
-                      // Potensi Section
-                      // const SizedBox(
-                      //   width: 16,
-                      // ),
-                      // Column(
-                      //   children: [
-                      //     InkWell(
-                      //       onTap: () {},
-                      //       child: Container(
-                      //         width: 83,
-                      //         height: 83,
-                      //         padding: EdgeInsets.all(21.0),
-                      //         decoration: BoxDecoration(
-                      //           color:
-                      //               const Color(0xFF0196FF).withOpacity(0.05),
-                      //           border: Border.all(
-                      //               color: const Color(0xFF0196FF),
-                      //               width: 0,
-                      //               style: BorderStyle.none),
-                      //           borderRadius: BorderRadius.circular(24),
-                      //           //color: Colors.transparent,
-                      //           shape: BoxShape.rectangle,
-                      //         ),
-                      //         child: Ink.image(
-                      //           image:
-                      //               AssetImage('assets/images/status-up.png'),
-                      //           height: 40,
-                      //           width: 40,
-                      //           //fit: BoxFit.fill,
-                      //         ),
-                      //       ),
-                      //     ),
-                      //     const SizedBox(
-                      //       height: 8,
-                      //     ),
-                      //     Text('Potensi'),
-                      //   ],
-                      // ),
-                      // Akhir Potensi Section
-                      const SizedBox(
-                        width: 16,
-                      ),
-                      Column(
-                        children: [
-                          InkWell(
-                            onTap: () {},
-                            child: Container(
-                              width: 83,
-                              height: 83,
-                              padding: EdgeInsets.all(21.0),
-                              decoration: BoxDecoration(
-                                color:
-                                    const Color(0xFF0196FF).withOpacity(0.05),
-                                border: Border.all(
-                                    color: const Color(0xFF0196FF),
-                                    width: 0,
-                                    style: BorderStyle.none),
-                                borderRadius: BorderRadius.circular(24),
-                                //color: Colors.transparent,
-                                shape: BoxShape.rectangle,
-                              ),
-                              child: Ink.image(
-                                image: AssetImage('assets/images/lovely.png'),
-                                height: 40,
-                                width: 40,
-                                //fit: BoxFit.fill,
-                              ),
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 8,
-                          ),
-                          Text(
-                            'Program Kasih',
-                            style: blackTextStyle.copyWith(fontSize: 12),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
               ],
             ),
           ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  // Potensi Section
+                  Column(
+                    children: [
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return const TabBarPage();
+                              },
+                            ),
+                          );
+                        },
+                        child: Container(
+                          width: 83,
+                          height: 83,
+                          padding: EdgeInsets.all(21.0),
+                          decoration: BoxDecoration(
+                            color: const Color(0xFF0196FF).withOpacity(0.05),
+                            border: Border.all(
+                                color: const Color(0xFF0196FF),
+                                width: 0,
+                                style: BorderStyle.none),
+                            borderRadius: BorderRadius.circular(24),
+                            //color: Colors.transparent,
+                            shape: BoxShape.rectangle,
+                          ),
+                          child: Ink.image(
+                            image: AssetImage('assets/images/people.png'),
+                            height: 40,
+                            width: 40,
+                            //fit: BoxFit.fill,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 8,
+                      ),
+                      Text(
+                        'Profil',
+                        style: blackTextStyle.copyWith(fontSize: 12),
+                      ),
+                    ],
+                  ),
+                  // Akhir Potensi Section
+                  const SizedBox(
+                    width: 16,
+                  ),
+                  Column(
+                    children: [
+                      InkWell(
+                        onTap: () async {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
+                            return const detailsWilayah();
+                          }));
+                        },
+                        child: Container(
+                          width: 83,
+                          height: 83,
+                          padding: EdgeInsets.all(20.0),
+                          decoration: BoxDecoration(
+                            color: const Color(0xFF0196FF).withOpacity(0.05),
+                            border: Border.all(
+                                color: const Color(0xFF0196FF),
+                                width: 0,
+                                style: BorderStyle.none),
+                            borderRadius: BorderRadius.circular(24),
+                            //color: Colors.transparent,
+                            shape: BoxShape.rectangle,
+                          ),
+                          child: Ink.image(
+                            image: AssetImage('assets/images/map.png'),
+                            //fit: BoxFit.fill,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 8,
+                      ),
+                      Text(
+                        'Wilayah',
+                        style: blackTextStyle.copyWith(fontSize: 12),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    width: 16,
+                  ),
+                  Column(
+                    children: [
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                // return LisViewActivity(
+                                //   title: 'Data List Kelurahan',
+                                // );
+                                return detailskelurahan();
+                              },
+                            ),
+                          );
+                        },
+                        child: Container(
+                          width: 83,
+                          height: 83,
+                          padding: const EdgeInsets.all(21.0),
+                          decoration: BoxDecoration(
+                            color: const Color(0xFF0196FF).withOpacity(0.05),
+                            border: Border.all(
+                                color: const Color(0xFF0196FF),
+                                width: 0,
+                                style: BorderStyle.none),
+                            borderRadius: BorderRadius.circular(24),
+                            //color: Colors.transparent,
+                            shape: BoxShape.rectangle,
+                          ),
+                          child: Ink.image(
+                            image: const AssetImage(
+                                'assets/images/personalcard.png'),
+                            height: 40,
+                            width: 40,
+                            //fit: BoxFit.fill,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 8,
+                      ),
+                      Text(
+                        'Kelurahan',
+                        style: blackTextStyle.copyWith(fontSize: 12),
+                      ),
+                    ],
+                  ),
+                  // Potensi Section
+                  // const SizedBox(
+                  //   width: 16,
+                  // ),
+                  // Column(
+                  //   children: [
+                  //     InkWell(
+                  //       onTap: () {},
+                  //       child: Container(
+                  //         width: 83,
+                  //         height: 83,
+                  //         padding: EdgeInsets.all(21.0),
+                  //         decoration: BoxDecoration(
+                  //           color:
+                  //               const Color(0xFF0196FF).withOpacity(0.05),
+                  //           border: Border.all(
+                  //               color: const Color(0xFF0196FF),
+                  //               width: 0,
+                  //               style: BorderStyle.none),
+                  //           borderRadius: BorderRadius.circular(24),
+                  //           //color: Colors.transparent,
+                  //           shape: BoxShape.rectangle,
+                  //         ),
+                  //         child: Ink.image(
+                  //           image:
+                  //               AssetImage('assets/images/status-up.png'),
+                  //           height: 40,
+                  //           width: 40,
+                  //           //fit: BoxFit.fill,
+                  //         ),
+                  //       ),
+                  //     ),
+                  //     const SizedBox(
+                  //       height: 8,
+                  //     ),
+                  //     Text('Potensi'),
+                  //   ],
+                  // ),
+                  // Akhir Potensi Section
+                  const SizedBox(
+                    width: 16,
+                  ),
+                  Column(
+                    children: [
+                      InkWell(
+                        onTap: () {},
+                        child: Container(
+                          width: 83,
+                          height: 83,
+                          padding: EdgeInsets.all(21.0),
+                          decoration: BoxDecoration(
+                            color: const Color(0xFF0196FF).withOpacity(0.05),
+                            border: Border.all(
+                                color: const Color(0xFF0196FF),
+                                width: 0,
+                                style: BorderStyle.none),
+                            borderRadius: BorderRadius.circular(24),
+                            //color: Colors.transparent,
+                            shape: BoxShape.rectangle,
+                          ),
+                          child: Ink.image(
+                            image: AssetImage('assets/images/lovely.png'),
+                            height: 40,
+                            width: 40,
+                            //fit: BoxFit.fill,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 8,
+                      ),
+                      Text(
+                        'Program Kasih',
+                        style: blackTextStyle.copyWith(fontSize: 12),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ),
+
           Padding(
             padding:
                 const EdgeInsets.only(top: 26, right: 0, bottom: 0, left: 24),
@@ -391,195 +396,197 @@ class StackHome extends StatelessWidget {
                     const SizedBox(
                       width: 8,
                     ),
-                    Container(
-                      padding: const EdgeInsets.only(
-                          top: 2, right: 6, bottom: 2, left: 6),
-                      // ignore: sort_child_properties_last
-                      child: Text(
-                        'Segera Hadir',
-                        style: blackTextStyle.copyWith(
-                          color: Colors.white,
-                          fontSize: 8,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      decoration: BoxDecoration(
-                        color: Colors.green,
-                        borderRadius: BorderRadius.circular(24),
-                        //color: Colors.transparent,
-                        shape: BoxShape.rectangle,
-                      ),
-                    ),
+                    // Container(
+                    //   padding: const EdgeInsets.only(
+                    //       top: 2, right: 6, bottom: 2, left: 6),
+                    //   // ignore: sort_child_properties_last
+                    //   child: Text(
+                    //     'Segera Hadir',
+                    //     style: blackTextStyle.copyWith(
+                    //       color: Colors.white,
+                    //       fontSize: 8,
+                    //       fontWeight: FontWeight.bold,
+                    //     ),
+                    //   ),
+                    //   decoration: BoxDecoration(
+                    //     color: Colors.green,
+                    //     borderRadius: BorderRadius.circular(24),
+                    //     //color: Colors.transparent,
+                    //     shape: BoxShape.rectangle,
+                    //   ),
+                    // ),
                   ],
                 ),
                 const SizedBox(
                   height: 16,
                 ),
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Column(
-                        children: [
-                          InkWell(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => PerizinanPage(),
-                                ),
-                              );
-                            },
-                            child: Container(
-                              width: 83,
-                              height: 83,
-                              padding: EdgeInsets.all(21),
-                              decoration: BoxDecoration(
-                                color: const Color(0xFF0196FF).withOpacity(0.05),
-                                border: Border.all(
-                                    color: const Color(0xFF0196FF),
-                                    width: 0,
-                                    style: BorderStyle.none),
-                                borderRadius: BorderRadius.circular(24),
-                                //color: Colors.transparent,
-                                shape: BoxShape.rectangle,
-                              ),
-                              child: Ink.image(
-                                image: AssetImage('assets/images/suratizin.png'),
-                                fit: BoxFit.fill,
-                              ),
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 8,
-                          ),
-                          Text(
-                            'Surat Perizinan',
-                            style: blackTextStyle.copyWith(fontSize: 12),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(
-                        width: 16,
-                      ),
-                      Column(
-                        children: [
-                          InkWell(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => const KeteranganPage(),
-                                ),
-                              );
-                            },
-                            child: Container(
-                              width: 83,
-                              height: 83,
-                              padding: const EdgeInsets.all(21),
-                              decoration: BoxDecoration(
-                                color:
-                                const Color(0xFF0196FF).withOpacity(0.05),
-                                border: Border.all(
-                                    color: const Color(0xFF0196FF),
-                                    width: 0,
-                                    style: BorderStyle.none),
-                                borderRadius: BorderRadius.circular(24),
-                                //color: Colors.transparent,
-                                shape: BoxShape.rectangle,
-                              ),
-                              child: Ink.image(
-                                image:
-                                    AssetImage('assets/images/shield-tick.png'),
-                                fit: BoxFit.fill,
-                              ),
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 8,
-                          ),
-                          Text(
-                            'Surat Keterangan',
-                            style: blackTextStyle.copyWith(fontSize: 12),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(
-                        width: 16,
-                      ),
-                      Column(
-                        children: [
-                          InkWell(
-                            onTap: () {},
-                            child: Container(
-                              width: 83,
-                              height: 83,
-                              padding: EdgeInsets.all(21),
-                              decoration: BoxDecoration(
-                                color:
-                                   bgAbu.withOpacity(0.05),
-                                border: Border.all(
-                                    color: const Color(0xFF0196FF),
-                                    width: 0,
-                                    style: BorderStyle.none),
-                                borderRadius: BorderRadius.circular(24),
-                                //color: Colors.transparent,
-                                shape: BoxShape.rectangle,
-                              ),
-                              child: Ink.image(
-                                image: AssetImage('assets/images/pengaduan.png'),
-                                fit: BoxFit.fill,
-                              ),
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 8,
-                          ),
-                          Text('Pengaduan'),
-                        ],
-                      ),
-                      const SizedBox(
-                        width: 16,
-                      ),
-                      Column(
-                        children: [
-                          InkWell(
-                            onTap: () {},
-                            child: Container(
-                              width: 83,
-                              height: 83,
-                              padding: EdgeInsets.all(21),
-                              decoration: BoxDecoration(
-                                color:
-                                bgAbu.withOpacity(0.05),
-                                border: Border.all(
-                                    color: const Color(0xFF0196FF),
-                                    width: 0,
-                                    style: BorderStyle.none),
-                                borderRadius: BorderRadius.circular(24),
-                                //color: Colors.transparent,
-                                shape: BoxShape.rectangle,
-                              ),
-                              child: Ink.image(
-                                image: AssetImage('assets/images/program.png'),
-                                fit: BoxFit.fill,
-                              ),
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 8,
-                          ),
-                          Text('Program'),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
               ],
             ),
           ),
-          const SizedBox(height: 16,),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Column(
+                    children: [
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => PerizinanPage(),
+                            ),
+                          );
+                        },
+                        child: Container(
+                          width: 83,
+                          height: 83,
+                          padding: EdgeInsets.all(21),
+                          decoration: BoxDecoration(
+                            color: const Color(0xFF0196FF).withOpacity(0.05),
+                            border: Border.all(
+                                color: const Color(0xFF0196FF),
+                                width: 0,
+                                style: BorderStyle.none),
+                            borderRadius: BorderRadius.circular(24),
+                            //color: Colors.transparent,
+                            shape: BoxShape.rectangle,
+                          ),
+                          child: Ink.image(
+                            image: AssetImage('assets/images/suratizin.png'),
+                            fit: BoxFit.fill,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 8,
+                      ),
+                      Text(
+                        'Surat Perizinan',
+                        style: blackTextStyle.copyWith(fontSize: 12),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    width: 16,
+                  ),
+                  Column(
+                    children: [
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const KeteranganPage(),
+                            ),
+                          );
+                        },
+                        child: Container(
+                          width: 83,
+                          height: 83,
+                          padding: const EdgeInsets.all(21),
+                          decoration: BoxDecoration(
+                            color: const Color(0xFF0196FF).withOpacity(0.05),
+                            border: Border.all(
+                                color: const Color(0xFF0196FF),
+                                width: 0,
+                                style: BorderStyle.none),
+                            borderRadius: BorderRadius.circular(24),
+                            //color: Colors.transparent,
+                            shape: BoxShape.rectangle,
+                          ),
+                          child: Ink.image(
+                            image: AssetImage('assets/images/shield-tick.png'),
+                            fit: BoxFit.fill,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 8,
+                      ),
+                      Text(
+                        'Surat Keterangan',
+                        style: blackTextStyle.copyWith(fontSize: 12),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    width: 16,
+                  ),
+                  Column(
+                    children: [
+                      InkWell(
+                        onTap: () {},
+                        child: Container(
+                          width: 83,
+                          height: 83,
+                          padding: EdgeInsets.all(21),
+                          decoration: BoxDecoration(
+                            color: bgAbu.withOpacity(0.05),
+                            border: Border.all(
+                                color: const Color(0xFF0196FF),
+                                width: 0,
+                                style: BorderStyle.none),
+                            borderRadius: BorderRadius.circular(24),
+                            //color: Colors.transparent,
+                            shape: BoxShape.rectangle,
+                          ),
+                          child: Ink.image(
+                            image: AssetImage('assets/images/pengaduan.png'),
+                            fit: BoxFit.fill,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 8,
+                      ),
+                      Text('Pengaduan'),
+                    ],
+                  ),
+                  const SizedBox(
+                    width: 16,
+                  ),
+                  Column(
+                    children: [
+                      InkWell(
+                        onTap: () {},
+                        child: Container(
+                          width: 83,
+                          height: 83,
+                          padding: EdgeInsets.all(21),
+                          decoration: BoxDecoration(
+                            color: bgAbu.withOpacity(0.05),
+                            border: Border.all(
+                                color: const Color(0xFF0196FF),
+                                width: 0,
+                                style: BorderStyle.none),
+                            borderRadius: BorderRadius.circular(24),
+                            //color: Colors.transparent,
+                            shape: BoxShape.rectangle,
+                          ),
+                          child: Ink.image(
+                            image: AssetImage('assets/images/program.png'),
+                            fit: BoxFit.fill,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 8,
+                      ),
+                      Text('Program'),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ),
+
+          const SizedBox(
+            height: 16,
+          ),
           const Divider(
             height: 16,
             thickness: 10,
@@ -613,242 +620,245 @@ class StackHome extends StatelessWidget {
                 const SizedBox(
                   height: 16,
                 ),
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Column(
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      Column(
                         children: [
-                          Column(
-                            children: [
-                              InkWell(
-                                onTap: () async {
-                                  final _call = 'tel:$_phoneNumberPolis';
-                                  final _text = 'sms:$_phoneNumberPolis';
-                                  if (await canLaunch(_call)) {
-                                    await launch(_call);
-                                  }
-                                },
-                                child: Container(
-                                  width: 83,
-                                  height: 83,
-                                  padding: EdgeInsets.all(21.0),
-                                  decoration: BoxDecoration(
-                                    color: const Color(0xFF0196FF)
-                                        .withOpacity(0.05),
-                                    border: Border.all(
-                                        color: const Color(0xFF0196FF),
-                                        width: 0,
-                                        style: BorderStyle.none),
-                                    borderRadius: BorderRadius.circular(24),
-                                    //color: Colors.transparent,
-                                    shape: BoxShape.rectangle,
-                                  ),
-                                  child: Ink.image(
-                                    image: AssetImage(
-                                        'assets/images/call-calling.png'),
-                                    fit: BoxFit.fill,
-                                  ),
-                                ),
+                          InkWell(
+                            onTap: () async {
+                              final _call = 'tel:$_phoneNumberPolis';
+                              final _text = 'sms:$_phoneNumberPolis';
+                              if (await canLaunch(_call)) {
+                                await launch(_call);
+                              }
+                            },
+                            child: Container(
+                              width: 83,
+                              height: 83,
+                              padding: EdgeInsets.all(21.0),
+                              decoration: BoxDecoration(
+                                color:
+                                    const Color(0xFF0196FF).withOpacity(0.05),
+                                border: Border.all(
+                                    color: const Color(0xFF0196FF),
+                                    width: 0,
+                                    style: BorderStyle.none),
+                                borderRadius: BorderRadius.circular(24),
+                                //color: Colors.transparent,
+                                shape: BoxShape.rectangle,
                               ),
-                              const SizedBox(
-                                height: 8,
+                              child: Ink.image(
+                                image: AssetImage(
+                                    'assets/images/call-calling.png'),
+                                fit: BoxFit.fill,
                               ),
-                              Text(
-                                'Polsek',
-                                style: blackTextStyle.copyWith(fontSize: 12),
-                              ),
-                            ],
+                            ),
                           ),
                           const SizedBox(
-                            width: 16,
+                            height: 8,
                           ),
-                          Column(
-                            children: [
-                              InkWell(
-                                onTap: () async {
-                                  final _call = 'tel:$_phoneNumberDamkar';
-                                  final _text = 'sms:$_phoneNumberDamkar';
-                                  if (await canLaunch(_call)) {
-                                    await launch(_call);
-                                  }
-                                },
-                                child: Container(
-                                  width: 83,
-                                  height: 83,
-                                  padding: const EdgeInsets.all(21),
-                                  decoration: BoxDecoration(
-                                    color: const Color(0xFF0196FF)
-                                        .withOpacity(0.05),
-                                    border: Border.all(
-                                        color: const Color(0xFF0196FF),
-                                        width: 0,
-                                        style: BorderStyle.none),
-                                    borderRadius: BorderRadius.circular(24),
-                                    //color: Colors.transparent,
-                                    shape: BoxShape.rectangle,
-                                  ),
-                                  child: Ink.image(
-                                    image: AssetImage(
-                                        'assets/images/call-calling.png'),
-                                    fit: BoxFit.fill,
-                                  ),
-                                ),
-                              ),
-                              const SizedBox(
-                                height: 8,
-                              ),
-                              Text(
-                                'Damkar',
-                                style: blackTextStyle.copyWith(fontSize: 12),
-                              ),
-                            ],
-                          ),
-                          const SizedBox(
-                            width: 16,
-                          ),
-                          Column(
-                            children: [
-                              InkWell(
-                                onTap: () async {
-                                  final _call = 'tel:$_phoneNumberAmbulance';
-                                  final _text = 'sms:$_phoneNumberAmbulance';
-                                  if (await canLaunch(_call)) {
-                                    await launch(_call);
-                                  }
-                                },
-                                child: Container(
-                                  width: 83,
-                                  height: 83,
-                                  padding: const EdgeInsets.all(21),
-                                  decoration: BoxDecoration(
-                                    color: const Color(0xFF0196FF)
-                                        .withOpacity(0.05),
-                                    border: Border.all(
-                                        color: const Color(0xFF0196FF),
-                                        width: 0,
-                                        style: BorderStyle.none),
-                                    borderRadius: BorderRadius.circular(24),
-                                    //color: Colors.transparent,
-                                    shape: BoxShape.rectangle,
-                                  ),
-                                  child: Ink.image(
-                                    image: AssetImage(
-                                        'assets/images/call-calling.png'),
-                                    fit: BoxFit.fill,
-                                  ),
-                                ),
-                              ),
-                              const SizedBox(
-                                height: 8,
-                              ),
-                              Text(
-                                'Ambulance',
-                                style: blackTextStyle.copyWith(fontSize: 12),
-                              ),
-                            ],
-                          ),
-                          const SizedBox(
-                            width: 16,
-                          ),
-                          Column(
-                            children: [
-                              InkWell(
-                                onTap: () async {
-                                  final _call = 'tel:$_phoneNumberJalan';
-                                  final _text = 'sms:$_phoneNumberJalan';
-                                  if (await canLaunch(_call)) {
-                                    await launch(_call);
-                                  }
-                                },
-                                child: Container(
-                                  width: 83,
-                                  height: 83,
-                                  padding: EdgeInsets.all(21),
-                                  decoration: BoxDecoration(
-                                    color: const Color(0xFF0196FF)
-                                        .withOpacity(0.05),
-                                    border: Border.all(
-                                        color: const Color(0xFF0196FF),
-                                        width: 0,
-                                        style: BorderStyle.none),
-                                    borderRadius: BorderRadius.circular(24),
-                                    //color: Colors.transparent,
-                                    shape: BoxShape.rectangle,
-                                  ),
-                                  child: Ink.image(
-                                    image: AssetImage(
-                                        'assets/images/call-calling.png'),
-                                    fit: BoxFit.fill,
-                                  ),
-                                ),
-                              ),
-                              const SizedBox(
-                                height: 8,
-                              ),
-                              Text(
-                                'Pengaduan Lampu',
-                                style: blackTextStyle.copyWith(fontSize: 12),
-                              ),
-                              Text('Jalan (PJPP)'),
-                            ],
+                          Text(
+                            'Polsek',
+                            style: blackTextStyle.copyWith(fontSize: 12),
                           ),
                         ],
                       ),
                       const SizedBox(
-                        height: 16,
+                        width: 16,
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      Column(
                         children: [
-                          Column(
-                            children: [
-                              InkWell(
-                                onTap: () async {
-                                  final _call = 'tel:$_phoneNumberPolis';
-                                  final _text = 'sms:$_phoneNumberPolis';
-                                  if (await canLaunch(_call)) {
-                                    await launch(_call);
-                                  }
-                                },
-                                child: Container(
-                                  width: 83,
-                                  height: 83,
-                                  padding: EdgeInsets.all(21.0),
-                                  decoration: BoxDecoration(
-                                    color: const Color(0xFF0196FF)
-                                        .withOpacity(0.05),
-                                    border: Border.all(
-                                        color: const Color(0xFF0196FF),
-                                        width: 0,
-                                        style: BorderStyle.none),
-                                    borderRadius: BorderRadius.circular(24),
-                                    //color: Colors.transparent,
-                                    shape: BoxShape.rectangle,
-                                  ),
-                                  child: Ink.image(
-                                    image: AssetImage(
-                                        'assets/images/call-calling.png'),
-                                    fit: BoxFit.fill,
-                                  ),
-                                ),
+                          InkWell(
+                            onTap: () async {
+                              final _call = 'tel:$_phoneNumberDamkar';
+                              final _text = 'sms:$_phoneNumberDamkar';
+                              if (await canLaunch(_call)) {
+                                await launch(_call);
+                              }
+                            },
+                            child: Container(
+                              width: 83,
+                              height: 83,
+                              padding: const EdgeInsets.all(21),
+                              decoration: BoxDecoration(
+                                color:
+                                    const Color(0xFF0196FF).withOpacity(0.05),
+                                border: Border.all(
+                                    color: const Color(0xFF0196FF),
+                                    width: 0,
+                                    style: BorderStyle.none),
+                                borderRadius: BorderRadius.circular(24),
+                                //color: Colors.transparent,
+                                shape: BoxShape.rectangle,
                               ),
-                              const SizedBox(
-                                height: 8,
+                              child: Ink.image(
+                                image: AssetImage(
+                                    'assets/images/call-calling.png'),
+                                fit: BoxFit.fill,
                               ),
-                              Text('Puskesmas'),
-                            ],
+                            ),
                           ),
+                          const SizedBox(
+                            height: 8,
+                          ),
+                          Text(
+                            'Damkar',
+                            style: blackTextStyle.copyWith(fontSize: 12),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        width: 16,
+                      ),
+                      Column(
+                        children: [
+                          InkWell(
+                            onTap: () async {
+                              final _call = 'tel:$_phoneNumberAmbulance';
+                              final _text = 'sms:$_phoneNumberAmbulance';
+                              if (await canLaunch(_call)) {
+                                await launch(_call);
+                              }
+                            },
+                            child: Container(
+                              width: 83,
+                              height: 83,
+                              padding: const EdgeInsets.all(21),
+                              decoration: BoxDecoration(
+                                color:
+                                    const Color(0xFF0196FF).withOpacity(0.05),
+                                border: Border.all(
+                                    color: const Color(0xFF0196FF),
+                                    width: 0,
+                                    style: BorderStyle.none),
+                                borderRadius: BorderRadius.circular(24),
+                                //color: Colors.transparent,
+                                shape: BoxShape.rectangle,
+                              ),
+                              child: Ink.image(
+                                image: AssetImage(
+                                    'assets/images/call-calling.png'),
+                                fit: BoxFit.fill,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 8,
+                          ),
+                          Text(
+                            'Ambulance',
+                            style: blackTextStyle.copyWith(fontSize: 12),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        width: 16,
+                      ),
+                      Column(
+                        children: [
+                          InkWell(
+                            onTap: () async {
+                              final _call = 'tel:$_phoneNumberJalan';
+                              final _text = 'sms:$_phoneNumberJalan';
+                              if (await canLaunch(_call)) {
+                                await launch(_call);
+                              }
+                            },
+                            child: Container(
+                              width: 83,
+                              height: 83,
+                              padding: EdgeInsets.all(21),
+                              decoration: BoxDecoration(
+                                color:
+                                    const Color(0xFF0196FF).withOpacity(0.05),
+                                border: Border.all(
+                                    color: const Color(0xFF0196FF),
+                                    width: 0,
+                                    style: BorderStyle.none),
+                                borderRadius: BorderRadius.circular(24),
+                                //color: Colors.transparent,
+                                shape: BoxShape.rectangle,
+                              ),
+                              child: Ink.image(
+                                image: AssetImage(
+                                    'assets/images/call-calling.png'),
+                                fit: BoxFit.fill,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 8,
+                          ),
+                          Text(
+                            'Lampu Jalan',
+                            style: blackTextStyle.copyWith(fontSize: 12),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        width: 16,
+                      ),
+                      Column(
+                        children: [
+                          InkWell(
+                            onTap: () async {
+                              final _call = 'tel:$_phoneNumberPolis';
+                              final _text = 'sms:$_phoneNumberPolis';
+                              if (await canLaunch(_call)) {
+                                await launch(_call);
+                              }
+                            },
+                            child: Container(
+                              width: 83,
+                              height: 83,
+                              padding: EdgeInsets.all(21.0),
+                              decoration: BoxDecoration(
+                                color:
+                                    const Color(0xFF0196FF).withOpacity(0.05),
+                                border: Border.all(
+                                    color: const Color(0xFF0196FF),
+                                    width: 0,
+                                    style: BorderStyle.none),
+                                borderRadius: BorderRadius.circular(24),
+                                //color: Colors.transparent,
+                                shape: BoxShape.rectangle,
+                              ),
+                              child: Ink.image(
+                                image: AssetImage(
+                                    'assets/images/call-calling.png'),
+                                fit: BoxFit.fill,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 8,
+                          ),
+                          Text('Puskesmas'),
                         ],
                       ),
                     ],
                   ),
-                ),
-              ],
+                  const SizedBox(
+                    height: 16,
+                  ),
+                ],
+              ),
             ),
           ),
-          const SizedBox(height: 16,),
+
+          const SizedBox(
+            height: 16,
+          ),
           const Divider(
             height: 16,
             thickness: 10,
