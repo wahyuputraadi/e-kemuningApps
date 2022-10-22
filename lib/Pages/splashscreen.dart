@@ -31,49 +31,84 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: primaryColor,
-      body: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 300.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Column(
-              children: [
-                Icon(
-                  Icons.rocket_launch_rounded,
-                  color: whiteColor,
-                  size: 80,
-                ),
-                const SizedBox(
-                  width: 5,
-                ),
-                Text(
-                  'E - Kemuning',
-                  style: whiteTextStyle.copyWith(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [primaryColor, whiteColor],
+          ),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 50),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Column(
+                    children: [
+                      const SizedBox(
+                        height: 250,
+                      ),
+                      Icon(
+                        Icons.rocket_launch_rounded,
+                        color: whiteColor,
+                        size: 100,
+                      ),
+                      const SizedBox(
+                        width: 5,
+                      ),
+                      Text(
+                        'E - Kemuning',
+                        style: whiteTextStyle.copyWith(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  )
+                ],
+              ),
+              const Spacer(),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Column(
+                    children: [
+                      Text(
+                        'Powered by',
+                        style: blackTextStyle.copyWith(fontSize: 12),
+                      ),
+                      Row(
+                        children: [
+                          Image.asset(
+                            'assets/images/logo_kemuning.png',
+                            width: 30,
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Image.asset(
+                            'assets/images/logo_uin.png',
+                            width: 50,
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Image.asset(
+                            'assets/images/logo_synapse.png',
+                            width: 110,
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
-                ),
-                Row(
-                  children: [
-                    Text(
-                      'powered by ',
-                      style: whiteTextStyle.copyWith(
-                        fontSize: 10,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    Text(
-                      'synapse academy',
-                      style: orangeTextStyle.copyWith(
-                        fontSize: 10,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    )
-                  ],
-                ),
-              ],
-            )
-          ],
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );
